@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<services>
+	<service id="LoginServices" className="LoginServices\LoginProxy" serviceMethod="doLogin">
+	<!-- attribute folderID is the constante controller_folder and filenameID is the constante controller_filename -->
+		<controller id="subscriber" name="Controllers\SubscribersController" referer="subscriber" folderID="/var/www/html/mailinglistmanager.local/mailinglist/Controllers/"
+			  filenameID="subscribersController.php">
+			<action id="loginSubscriber"></action>
+		<!--<action id="create">create</action>
+		    <action id="update">update</action>
+			<action id="delete">update</action>-->
+		</controller>
+	</service>
+	<service id="RegisterServices" className="LoginServices\RegisterProxy" serviceMethod="doRegister">
+		<controller id="subscriber" name="Controllers\SubscribersController" referer="subscriber" folderID="/var/www/html/mailinglistmanager.local/mailinglist/Controllers/"
+			filenameID="subscribersController.php">
+				<action id="createSubscriber">CreateSubscriber</action>
+		</controller>
+	</service>
+</services>
